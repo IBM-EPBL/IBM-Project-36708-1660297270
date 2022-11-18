@@ -1,0 +1,15 @@
+{
+	"fields": [
+		"prediction",
+		"probability"
+	],
+	"values": [
+		[
+			1,
+			[
+				0.28,
+				0.72
+			]
+		]
+	]
+}
