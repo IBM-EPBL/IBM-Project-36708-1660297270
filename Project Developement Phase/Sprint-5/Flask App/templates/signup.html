@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FDP SIGNUP</title>
+
+
+  <link rel="stylesheet" href="../static/signup.css">
+
+</head>
+
+<body>
+ 
+  <div id="login-form-wrap">
+    <h2>Sign in</h2>
+    <form id="login-form" action="{{ url_for('register') }}" method="post">
+      <p>
+        <input type="text" id="name" name="uname" placeholder="Username" required><i
+          class="validation"><span></span><span></span></i>
+      </p>
+      <p>
+        <input type="email" id="email" name="email" placeholder="Email Address" required><i
+          class="validation"><span></span><span></span></i>
+      </p>
+      <p>
+        <input type="text" id="num" name="phone" placeholder="Phone number" required><i
+          class="validation"><span></span><span></span></i>
+      </p>
+      <p>
+        <input type="text" id="pass" name="password" placeholder="Password" required><i
+          class="validation"><span></span><span></span></i>
+      </p>
+
+      <p>
+        <input type="submit" id="login" value="signin">
+      </p>
+    </form>
+    <div id="create-account-wrap">
+      <p>Already a member? <a href="{{ url_for('login') }}">Login now</a>
+      <p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
