@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+
+<head>
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/main.css') }}" />
+
+<link rel="stylesheet" href="../static/style.css">
+
+
+
+<body>
+  <form name="register" class="form-group" action="/prediction" method="post">
+    <center>
+
+      <ul>
+        <li style="color:white;font-weight: bolder;font-size: 45px;">Flight Delay Prediction
+        </li>
+        <li style="float:right"><a class="active" href=" {{ url_for('index') }}">Home</a></li>
+        <li style="float:right"><a class="active" href="{{ url_for('logout') }}">Log out</a></li>
+        <li style="float:right"><a class="active" href="{{ url_for('about') }}">About</a></li>
+      </ul>
+      <table>
+        <tr>
+          <td class="col-25"> <label>Enter Flight Number</label></td>
+          <td class="col-75"> <input class="cols" type="text" placeholder="Enter Flight Number" required name="name">
+          </td>
+        </tr>
+        <tr>
+          <td class="col-25"><label>Month</label></td>
+          <td class="col-75"><input class="cols" type="text" placeholder="Month" required name="month"></td>
+        </tr>
+        <tr>
+          <td class="col-25"><label> Day of month</label></td>
+          <td class="col-75"> <input class="cols" type="text" placeholder="Day of month" required name="dayofmonth"><br>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-25"><label>Day of week</label></td>
+          <td class="col-75"> <input class="cols" type="text" placeholder="Day of week" required name="dayofweek"><br>
+          </td><br>
+        </tr>
+        <tr>
+          <td class="col-25"><label>Origin</label></td>
+          <td class="col-75">
+            <div class="select">
+              <select id="country" required name="origin" placeholder="select origin">
+                <option value="" disabled selected>Select origin</option>
+                <option value="alt" selected style="color: black;">ATL - Hartsfield-Jackson Atlanta International
+                </option>
+                <option value="dtw" style="color: black;">DTW - Detroit Metropolitan Wayne County</option>
+                <option value="Sea" style="color: black;">SEA - Seattle-Tacoma International</option>
+                <option value="msp" style="color: black;">MSP - Minneapolis−Saint Paul International</option>
+                <option value="jfk" style="color: black;">JFK - John F. Kennedy International</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="col-25"><label>Destination</label></td>
+          <td class="col-75">
+            <select id="region" required name="destination">
+              <option value="alt" selected style="color: black;">ATL - Hartsfield-Jackson Atlanta International</option>
+              <option value="dtw" style="color: black;">DTW - Detroit Metropolitan Wayne County</option>
+              <option value="sea" style="color: black;">SEA - Seattle-Tacoma International</option>
+              <option value="msp" style="color: black;">MSP - Minneapolis-Saint Paul International</option>
+              <option value="jfk" style="color: black;">JFK - John F. Kennedy International</option>
+            </select>
+          </td>
+
+
+        <tr>
+          <td class="col-25"><label>Scheduled Departure Time</label> </td>
+          <td class="col-75"><label>Hour : </label>
+            <input placeholder="00" class="cols" type="text" required name="depthr" />
+            <label>Minutes : </label>
+            <input placeholder="00" class="cols" type="text" required name="deptmin" />
+          </td>
+        </tr>
+        <tr>
+          <td class="col-25"><label>Actual Departure Time </label> </td>
+          <td class="col-75"><label>Hour : </label>
+            <input placeholder="00" class="cols" type="text" required name="actdepthr" />
+            <label>Minutes : </label>
+            <input placeholder="00" class="cols" type="text" required name="actdeptmin" />
+          </td>
+        </tr>
+        <tr>
+          <td class="col-25"><label>Scheduled Arrival Time </label> </td>
+          <td class="col-75"><label>Hour : </label>
+            <input placeholder="00" class="cols" type="text" required name="arrtimehr" />
+            <label>Minutes : </label>
+            <input placeholder="00" class="cols" type="text" required name="arrtimemin" />
+          </td>
+        </tr>
+
+
+      </table>
+      <center> <br><button class="glow-button" type="submit" name="Predict">Predict</button></center>
+  </form>
+  <p>{{y}}</p>
+
+  </center>
+</body>
+
+</html>

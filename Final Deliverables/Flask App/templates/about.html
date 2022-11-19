@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+
+<body>
+
+
+    <ul>
+        <li style="color:white;font-weight: bolder;font-size: 45px;">Flight Delay Prediction
+        </li>
+        <li style="float:right"><a class="active" href=" {{ url_for('index') }}">Home</a></li>
+        <li style="float:right"><a class="active" href="{{ url_for('logout') }}">Log out</a></li>
+        <li style="float:right"><a class="active" href="{{ url_for('about') }}">about</a></li>
+    </ul>
+    <div class="back">
+        <p class="about">Flight Delay Prediction Model Using Machine Learning
+            Over the last twenty years, air travel has been increasingly preferred among travelers, mainly because of
+            its speed and in some cases comfort. This has led to phenomenal growth in air traffic and on the ground. An
+            increase in air traffic growth has also resulted in massive levels of aircraft delays on the ground and in
+            the air. These delays are responsible for large economic and environmental losses. The main objective of the
+            model is to predict flight delays accurately in order to optimize flight operations and minimize delays.
+
+            Using a machine learning model, we can predict flight arrival delays. The input to our algorithm is rows of
+            feature vector like departure date, departure delay, distance between the two airports, scheduled arrival
+            time etc. We then use decision tree classifier to predict if the flight arrival will be delayed or not. A
+            flight is considered to be delayed when difference between scheduled and actual arrival times is greater
+            than 15 minutes. Furthermore, we compare decision tree classifier with logistic regression and a simple
+            neural network for various figures of merit.</p>
+
+    </div>
+
+</body>
+
+</html>
